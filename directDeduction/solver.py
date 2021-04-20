@@ -16,7 +16,8 @@ def solve(matrix: tool.Matrix, showStatus = True)-> tool.Matrix:
                 matrix[a[0]][a[1]] = b[0]
         emptyLocs = tool.getEmptyLocs(matrix)
         if len(emptyLocs) == prev:
-            print("This sudoku arrangement in unsolveable by direct deduction, this is the furthest i can do")
+            if showStatus: 
+                print("This sudoku arrangement in unsolveable by direct deduction, this is the furthest i can do")
             return matrix
         prev = len(emptyLocs)
         if showStatus: print(f'Empty location length now: {prev}')
