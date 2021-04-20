@@ -1,7 +1,7 @@
-#Helper Functions for solver
+#Solver by pure direct deduction and elimination.
+#Full algorithm please see README.md file.
 Locs, Matrix = tuple[int, int], list[list[int]]
-def getLocState(matrix: Matrix)-> list[Locs]:
-    #Get all states of location (filled or empty)
+def getEmptyLocs(matrix: Matrix)-> list[Locs]:
     size = len(matrix)
     locs = list()
     for x in range(size):
